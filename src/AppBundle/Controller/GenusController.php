@@ -8,8 +8,16 @@
 
 namespace AppBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 class GenusController
 {
-
+    /**
+     * @Route("/genus/{sampleOnly}")
+     */
+    public function showAction($sampleOnly)
+    {
+        return new Response('Let us see: '.$sampleOnly);
+    }
 }
